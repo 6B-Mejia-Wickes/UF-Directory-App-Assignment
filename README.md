@@ -1,7 +1,10 @@
 # CEN3031 Assignment
 
-This repo contains 5 assignments for CEN3031.
-Switch branches to view the assignments.
+Repo contains assignments 3 - 5
 
-## [Assignment 1](https://github.com/CEN3031-spr16/UF-Directory-App-Assignment/tree/Assignment1)
-Introduction to HTTP and Asynchronous Programming using Node.js
+## Students
+
+Name             | Gatorlink
+-----------------|----------
+Takashi Wickes   | twickes32
+Krystal Mejia    | krystalmejia24
