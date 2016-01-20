@@ -79,4 +79,4 @@ var retrieveAllListings = function() {
 findLibraryWest();
 removeCable();
 updatePhelpsMemorial();
-// retrieveAllListings();
+retrieveAllListings();
