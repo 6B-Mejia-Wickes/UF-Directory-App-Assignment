@@ -18,6 +18,8 @@ var findLibraryWest = function() {
    */
   Listing.findOne({ 'name': 'Library West' }, function (err, listing) {
   if (err) return handleError(err);
+  console.log("\nFinding Library West...\n")
+
     console.log(listing) // Space Ghost is a talk show host.
   })
 
@@ -37,44 +39,44 @@ var removeCable = function() {
    })
    Listing.remove({ 'code': 'CABL' }, function (err) {
    if (err) return handleError(err);
+   console.log("\nRemoving CABL...\n");
+
    })
 };
 var updatePhelpsMemorial = function() {
   /*
     Phelps Memorial Hospital Center's address is incorrect. Find the listing, update it, and then
     log the updated document to the console.
-   */
-   Listing.collection.update(
-     { "code": "PHL"},
-     {
-       "address": "AHHHHH LOOK AT THTA IT CHANGED"
-     }
-   )
+  //  */
 
-   Listing.findOne({ 'code': 'PHL' }, function (err, listing) {
+   Listing.update({'code': 'PHL'}, { 'address': 'Look into your heart and you will find it' }, { upsert: true }, function (err, listing) {
    if (err) return handleError(err);
+   console.log("\nUpdating Phelps...\n");
+
      console.log(listing) // Space Ghost is a talk show host.
    })
 
-  //  MyModel.findOneAndUpdate({ "code": "PHL"}, listing.newData, {upsert:true}, function(err, listing){
-  //   if (err) return res.send(500, { error: err });
-  //   return res.send("succesfully saved");
-  //   });
-   //
-   //
+
+   Listing.findOne({ 'code': 'PHL' }, function (err, listing) {
+   if (err) return handleError(err);
+   console.log("\nUpdating Phelps...\n");
+
+     console.log(listing); // Space Ghost is a talk show host.
+   })
 
 };
 var retrieveAllListings = function() {
   /*
     Retrieve all listings in the database, and log them to the console.
    */
+   console.log("\nRetrieving all listings...\n");
    Listing.find(function (err, listing) {
      if (err) return console.error(err);
      console.log(listing);
    })
 };
 //
-// findLibraryWest();
-// removeCable();
+findLibraryWest();
+removeCable();
 updatePhelpsMemorial();
-retrieveAllListings();
+// retrieveAllListings();
